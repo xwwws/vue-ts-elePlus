@@ -5,7 +5,7 @@
     .wrapper
       nav
         RouterLink(to="/") adsfa
-        RouterLink(to="/about") adsfa
+        RouterLink(to="/custom-table") custom-table
   RouterView()
 </template>
 

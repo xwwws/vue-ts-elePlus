@@ -13,7 +13,8 @@ export default defineConfigWithVueTs(
     name: 'app/files-to-lint',
     files: ['**/*.{ts,mts,tsx,vue}'],
     rules: {
-      '@typescript-eslint/no-unused-vars': ['warn', { varsIgnorePattern: '^_' }],
+
+      '@typescript-eslint/no-unused-vars': ['off', { varsIgnorePattern: '^_' }],
       'vue/no-unused-components': 'error', // 未使用的组件报错
       'no-console': 'warn', // 禁止 console 输出（警告级别）
     },
