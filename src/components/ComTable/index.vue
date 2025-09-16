@@ -44,8 +44,8 @@ withDefaults(defineProps<Props<T>>(),{
           ...column.columnProps,
         }"
       >
-        <template v-if="$slots[column.prop]" #default="{ row, $index }">
-          <slot :name="column.prop" :row="toRaw(row)" :index="$index" />
+        <template v-if="$slots[column.slot]" #default="{ row, $index }">
+          <slot :name="column.slot" :row="toRaw(row)" :index="$index" />
         </template>
       </el-table-column>
     </el-table>

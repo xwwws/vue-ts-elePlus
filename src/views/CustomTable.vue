@@ -6,7 +6,7 @@
       :tableData="tableData"
       :total="232"
     >
-      <template #nameSlot="scope">
+      <template #address="scope">
         <el-button @click="showNameSlotScope(scope)"> nameSlotBtn</el-button>
       </template>
       <template #action="scope">
@@ -33,6 +33,11 @@ const columns = ref([
     slot: 'age',
   },
   {
+    label: 'address',
+    prop: 'address',
+    slot: 'address',
+  },
+  {
     label: 'action',
     prop: 'action',
     slot: 'action',
@@ -43,6 +48,9 @@ interface ITable {
   age: number
 }
 const tableData = ref<ITable[]>([
+  { name: "张三", age: 10 },
+  { name: "张三", age: 10 },
+  { name: "张三", age: 10 },
   { name: "张三", age: 10 },
 ])
 const showNameSlotScope = (scope) => {
